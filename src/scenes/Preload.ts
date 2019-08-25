@@ -1,11 +1,10 @@
 export class Preload extends Phaser.Scene {
     preload() {
-        this.load.setBaseURL('http://labs.phaser.io');
-        this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-
+        this.load.image('tiles', './assets/tiles.png');
+        this.load.tilemapTiledJSON('testlevel', './assets/testlevel.json');
 
     }
     create() {
-        this.add.image(100,100, 'logo');
+        this.scene.start('level');
     }
 }

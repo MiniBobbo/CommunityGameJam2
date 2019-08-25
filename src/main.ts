@@ -1,5 +1,6 @@
 import * as Phaser from "phaser";
 import { Preload } from "./scenes/Preload";
+import { LevelState } from "./scenes/LevelState";
 // import { Preload } from "./scenes/preload";
 // import { Boot } from "./scenes/boot";
 // import { Game } from "./scenes/game";
@@ -31,7 +32,7 @@ class Main extends Phaser.Game {
 
     // this.scene.add("boot", Boot, false);
     this.scene.add("preload", Preload, false);
-    // this.scene.add("game", Game, false);
+    this.scene.add("level", LevelState, false);
     this.scene.start("preload");
     }
 
