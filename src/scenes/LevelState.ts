@@ -1,3 +1,5 @@
+import { Player } from "../entities/Player";
+
 export class LevelState extends Phaser.Scene {
     preload() {
 
@@ -9,6 +11,8 @@ export class LevelState extends Phaser.Scene {
 
         //@ts-ignore
         map.createDynamicLayer("collision", tiles);
+
+        let p = new Player(this);
 
     }
 }

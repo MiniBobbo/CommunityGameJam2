@@ -1,0 +1,41 @@
+{
+	"textures": [
+		{
+			"image": "mainatlas.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 27,
+				"h": 32
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "player_stand_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 25,
+						"h": 30
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 25,
+						"h": 30
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:4093c5ba78dfb8a00748024261b0cd3b:f9662a53eb84f546b2eb7a54d0783b26:9b2a4530a0a88d46c7c406cc86ad22f4$"
+	}
+}
