@@ -4,7 +4,7 @@
 			"image": "mainatlas.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 27,
+				"w": 32,
 				"h": 32
 			},
 			"scale": 1,
@@ -29,6 +29,27 @@
 						"w": 25,
 						"h": 30
 					}
+				},
+				{
+					"filename": "blank",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 1,
+						"h": 1
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 3,
+						"h": 3
+					},
+					"frame": {
+						"x": 28,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					}
 				}
 			]
 		}
@@ -36,6 +57,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:4093c5ba78dfb8a00748024261b0cd3b:f9662a53eb84f546b2eb7a54d0783b26:9b2a4530a0a88d46c7c406cc86ad22f4$"
+		"smartupdate": "$TexturePacker:SmartUpdate:d11fde389a4377d6ffa8d3e43a3cd113:eead1a5069c35cb3b97727101adb790b:9b2a4530a0a88d46c7c406cc86ad22f4$"
 	}
 }
