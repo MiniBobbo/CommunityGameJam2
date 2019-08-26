@@ -12,10 +12,12 @@ export class LevelState extends Phaser.Scene {
         this.ih = new IH(this);
         let map = this.make.tilemap({ key: "testlevel" });
         let tiles = map.addTilesetImage("tiles", "tiles");
+        let basetiles = map.addTilesetImage("basetiles", "basetiles");
 
         //@ts-ignore
         let l = map.createDynamicLayer("collision", tiles);
         l.setCollisionByProperty({collide:true}, true);
+        let mg = map.createStaticLayer('mg', basetiles);
 
         this.player = new Player(this);
         this.physics.add.collider(this.player.sprite, l);
