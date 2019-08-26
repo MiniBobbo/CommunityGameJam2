@@ -10,14 +10,14 @@ class Main extends Phaser.Game {
   constructor() {
     const config: GameConfig = {
       type: Phaser.AUTO,
-      width: 800,
-      height: 800,
-      zoom:1,
+      width: 400,
+      height: 400,
+      zoom:2,
       physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 3000 },
-            debug: true
+            gravity: { y: 2000 },
+            debug: false
         }
       },
       scene:{

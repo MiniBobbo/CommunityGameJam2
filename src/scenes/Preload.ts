@@ -27,6 +27,12 @@ export class Preload extends Phaser.Scene {
         IH.AssignKeyToVirtualInput('L', 'jump');
         this.scene.start('level');
 
-        this.anims.create({ key: 'player_run', frames: this.anims.generateFrameNames('mainatlas', { prefix: 'blueJellyfish', end: 32, zeroPad: 4 }), repeat: -1 });
+        this.anims.create({ key: 'player_run', frameRate: 12, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_running_', end: 5}), repeat: -1 });
+        this.anims.create({ key: 'player_stand', frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_stand_', end: 1}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpup', frameRate: 60, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_jumpup_', start:1, end: 28}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpdown', frameRate: 16, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_jumpdown_', end: 3}), repeat: 0 });
+        this.anims.create({ key: 'player_teleport', frameRate: 60, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_teleport_', end: 28}), repeat: 0 });
+        this.anims.create({ key: 'player_appear', frameRate: 60, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_appear_', end: 28}), repeat: 0 });
+        this.anims.create({ key: 'blank', frameRate: 1, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'blank_', end: 1}), repeat: 0 });
     }
 }
