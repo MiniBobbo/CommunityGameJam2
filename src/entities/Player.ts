@@ -9,8 +9,8 @@ export class Player {
     PLAYER_ACCEL_AIR:number = 1500;
     PLAYER_MAX_SPEED_X:number = 200;
     PLAYER_MAX_SPEED_Y:number = 400;
-    PLAYER_JUMP_STR:number = 400;
-    PLAYER_JUMP_TIME:number = 12;
+    PLAYER_JUMP_STR:number = 300;
+    PLAYER_JUMP_TIME:number = 18;
     DeltaJump:number = 0;
     ReleasedJump:boolean = false;
 
@@ -22,7 +22,7 @@ export class Player {
         this.sprite.anims.play('player_run');
 
         this.sprite.setMaxVelocity(this.PLAYER_MAX_SPEED_X, this.PLAYER_MAX_SPEED_Y);
-        this.sprite.setDragX(this.PLAYER_DRAG_X).setSize(26, 30);
+        this.sprite.setDragX(this.PLAYER_DRAG_X).setSize(26, 28);
 
 
     }
@@ -52,7 +52,7 @@ export class Player {
         // }
 
         if(ih.IsPressed('jump')) {
-            if(this.sprite.body.blocked.down) {
+            if(this.sprite.body.blocked.down && ih.IsJustPressed('jump')) {
                 this.ReleasedJump = false;
                 this.sprite.setVelocityY(-this.PLAYER_JUMP_STR);
                 this.DeltaJump = 0;
