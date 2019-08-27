@@ -262,6 +262,27 @@
 					}
 				},
 				{
+					"filename": "player_teleport_29",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 3,
+						"h": 3
+					},
+					"frame": {
+						"x": 38,
+						"y": 19,
+						"w": 3,
+						"h": 3
+					}
+				},
+				{
 					"filename": "player_appear_10",
 					"rotated": false,
 					"trimmed": true,
@@ -2136,6 +2157,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:11e9a63e397571b41365248047e8e15a:4c62a4011cc3ab7b88e2f365acb5ca21:9b2a4530a0a88d46c7c406cc86ad22f4$"
+		"smartupdate": "$TexturePacker:SmartUpdate:4cb6e65fa8104544e70eb987a546d143:505bf0c39a25662ef8d1c8416745ccad:9b2a4530a0a88d46c7c406cc86ad22f4$"
 	}
 }

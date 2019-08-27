@@ -34,7 +34,11 @@ export class LevelState extends Phaser.Scene {
         this.cameras.main.fadeIn(300);
         this.debugText = this.add.text(10,10,'').setScrollFactor(0,0);
         this.events.on('debug', (message:string) => {this.debugText.text = message;}, this);
-        this.physics.add.overlap(this.player.sprite, this.zones, (p, z:Phaser.GameObjects.Zone) => {z.emit('overlap');});
+        this.events.on('playerwin', this.WinLevel, this);
+        this.physics.add.overlap(this.player.sprite, this.zones, (p, z:Phaser.GameObjects.Zone) => {
+            console.log(`Overlap zone ${z.name}`);    
+            z.emit('overlap', p);
+        });
     }
 
     update(time:number, dt:number) {
@@ -65,14 +69,14 @@ export class LevelState extends Phaser.Scene {
     WinLevel() {
         this.player.sprite.disableBody();
         this.time.addEvent({
-            delay:300,
+            delay:500,
             callbackScope:this,
             callback: () => {this.player.PlayAnimation('player_teleport');}
         });
         this.time.addEvent({
-            delay:800,
+            delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(700, 0,0,0,() => {this.scene.start('game');});}
+            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('game');});}
         });
     }
 

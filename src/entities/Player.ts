@@ -18,6 +18,7 @@ export class Player {
     constructor(scene:Phaser.Scene) {
         this.sprite = scene.physics.add.sprite(300,100, 'mainatlas', 'player_stand_0');
         this.scene = scene;
+        this.sprite.name = 'player';
 
         this.sprite.anims.play('player_run');
 
