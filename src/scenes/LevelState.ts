@@ -2,6 +2,7 @@ import { Player } from "../entities/Player";
 import { IH } from "../IH/IH";
 import { GameObjects } from "phaser";
 import { WinZone } from "../../zones/WinZone";
+import { CompScreen } from "../entities/CompScreen";
 
 export class LevelState extends Phaser.Scene {
     player:Player;
@@ -26,8 +27,8 @@ export class LevelState extends Phaser.Scene {
         l.setCollisionByProperty({collide:true}, true);
         let mg = map.createStaticLayer('mg', basetiles);
 
-        this.CreatePlayer(l);
         this.CreateZones();
+        this.CreatePlayer(l);
         let fg = map.createStaticLayer('fg', basetiles);
 
         this.cameras.main.startFollow(this.player.sprite);
@@ -89,7 +90,9 @@ export class LevelState extends Phaser.Scene {
                     let z = new WinZone(this, o.x,o.y, 100,100);
                     this.zones.push(z);
                     break;
-            
+                case 'screen':
+                    let s = new CompScreen(this, o.type);
+                    s.setPosition(o.x,o.y);
                 default:
                     break;
             }

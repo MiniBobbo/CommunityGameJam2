@@ -80,6 +80,18 @@
                  "width":44,
                  "x":344,
                  "y":192
+                }, 
+                {
+                 "height":0,
+                 "id":5,
+                 "name":"screen",
+                 "point":true,
+                 "rotation":0,
+                 "type":"This is a test screen.",
+                 "visible":true,
+                 "width":0,
+                 "x":530,
+                 "y":236
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -88,7 +100,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":5,
+ "nextobjectid":6,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
