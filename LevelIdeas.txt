@@ -1,0 +1,27 @@
+L1 – player works their way across the room learning to run and jump.
+Audio – “Hello?  Are you there?  Oh good.  We’ve been trying to get these replicators started remotely.  See if you can make it to the teleporter at the other end of this room.”
+
+L2 – Player learns that the computer lies.  In the middle of the room is a pool of acid and a sign that reads “The Acid is perfectly safe”
+Audio – “Great, you made it to the next room.  Do me a favor and get to the next teleporter.”
+(When the player gets near the sign) “Oh, ignore that sign.  The acid is actually… well… extremely deadly.  We’ve been having problems with the computer running the signs recently.”
+
+L3 – The player learns that things don’t always function the same from level to level.  
+Signs – “Acid extremely deadly.”
+Audio – “Ack, stupid computer.  Ignore that sign too.  You actually want to jump into this acid pool.  It can’t hurt you and the teleporter is down below.”
+
+L4 – The player learns that the person guiding them doesn’t know what they are doing.
+Audio – “You’re doing great!  I’m really excited about your progress.  Look, I think this acid pool is fine to jump into.  I have a note here that says ‘Acid safe’.  So hop right in!”  (Player dies a horrible death)/
+
+L5 – Player learns that they are a clone.
+Audio - “Sorry about that!  It ends up the ‘Acid Safe’ note wasn’t left by a coworker.  It was printed by the computer!  I should have realized.  Again, I’m so sorry…”
+
+L6 – Lasers.  Player can be killed by lasers firing.
+Sign – “Harmless laser testing.”
+Audio – “Ok, bad news first.  You’re a clone.  But here’s the good news!  You’re a clone of someone who is already dead, so it is like you are really that person!  Even better news!  That means today is technically your birthday, so let me be the first person to wish you a Happy Birthday!”
+
+L7 – Laser colors.  Player avoids the red lasers, but the blue lasers teleport you to the exit.
+Sign – “New study reports exposure to blue lasers linked to spontaneous human combustion.”
+Audio – “So this is a little awkward, but you might have noticed by now that the computer has a small bug that makes it want to exterminate all human life.  No biggie though because I think we have contained its influence to the signs that appear all over.  So just ignore those and you should be fine.”
+
+L8 – Spinning disks 
+

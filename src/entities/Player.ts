@@ -14,6 +14,8 @@ export class Player {
     DeltaJump:number = 0;
     ReleasedJump:boolean = false;
 
+    allowInput:boolean = true;
+
 
     constructor(scene:Phaser.Scene) {
         this.sprite = scene.physics.add.sprite(300,100, 'mainatlas', 'player_stand_0');
@@ -26,6 +28,9 @@ export class Player {
         this.sprite.setDragX(this.PLAYER_DRAG_X).setSize(26, 28);
 
 
+        this.sprite.on('disableinput', () => {this.allowInput= false;}, this);
+        this.sprite.on('enableinput', () => {this.allowInput= true;}, this);
+
     }
 
     Update(time:number, dt:number) {
@@ -33,6 +38,9 @@ export class Player {
     }
 
     HandleInput(ih:IH) {
+        if(!this.allowInput)
+            return;
+
         let ax = 0;
         this.sprite.setAccelerationX(0);
         let accel = this.sprite.body.blocked.down ? this.PLAYER_ACCEL : this.PLAYER_ACCEL_AIR;
@@ -77,10 +85,8 @@ export class Player {
             if(this.sprite.body.velocity.x == 0)
             this.PlayAnimation('player_stand');
             else 
-            this.PlayAnimation('player_run', true);
+            this.PlayAnimation('player_run', true); 
         }
-
-
     }
 
     PlayAnimation(anim:string, ignoreIfPlaying:boolean = true) {

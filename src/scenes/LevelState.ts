@@ -3,6 +3,7 @@ import { IH } from "../IH/IH";
 import { GameObjects } from "phaser";
 import { WinZone } from "../../zones/WinZone";
 import { CompScreen } from "../entities/CompScreen";
+import { LevelDef } from "../../def/LevelDef";
 
 export class LevelState extends Phaser.Scene {
     player:Player;
@@ -14,9 +15,9 @@ export class LevelState extends Phaser.Scene {
 
     }
 
-    create() {
+    create(level:LevelDef) {
         this.ih = new IH(this);
-        this.map = this.make.tilemap({ key: "testlevel" });
+        this.map = this.make.tilemap({ key: level.name });
         let map = this.map;
         let tiles = map.addTilesetImage("tiles", "tiles");
         let basetiles = map.addTilesetImage("basetiles", "basetiles");
@@ -25,6 +26,7 @@ export class LevelState extends Phaser.Scene {
         //@ts-ignore
         let l = map.createDynamicLayer("collision", tiles);
         l.setCollisionByProperty({collide:true}, true);
+        let bg = map.createStaticLayer('bg', basetiles);
         let mg = map.createStaticLayer('mg', basetiles);
 
         this.CreateZones();
@@ -40,7 +42,9 @@ export class LevelState extends Phaser.Scene {
             console.log(`Overlap zone ${z.name}`);    
             z.emit('overlap', p);
         });
+        this.cameras.main.setBounds(0,0,l.width, l.height);
     }
+
 
     update(time:number, dt:number) {
         this.ih.update();
@@ -61,14 +65,15 @@ export class LevelState extends Phaser.Scene {
             callback:() => {this.player.PlayAnimation('player_appear');}
         });
         this.time.addEvent({
-            delay:800,
+            delay:1500,
             callbackScope: this,
-            callback:() => {this.player.sprite.body.enable = true;}
+            callback:() => {this.player.sprite.body.enable = true; this.player.sprite.emit('enableinput');}
         });
     }
 
     WinLevel() {
         this.player.sprite.disableBody();
+        this.player.sprite.emit('disableinput');
         this.time.addEvent({
             delay:500,
             callbackScope:this,
@@ -77,7 +82,7 @@ export class LevelState extends Phaser.Scene {
         this.time.addEvent({
             delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('game');});}
+            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level');});}
         });
     }
 
@@ -87,7 +92,7 @@ export class LevelState extends Phaser.Scene {
             console.log(`Zone ${o.name}`);
             switch (o.name) {
                 case 'end':
-                    let z = new WinZone(this, o.x,o.y, 100,100);
+                    let z = new WinZone(this, o.x,o.y, o.width,o.height);
                     this.zones.push(z);
                     break;
                 case 'screen':
