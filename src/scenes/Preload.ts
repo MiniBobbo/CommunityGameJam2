@@ -41,6 +41,7 @@ export class Preload extends Phaser.Scene {
         this.anims.create({ key: 'player_jumpdown', frameRate: 16, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_jumpdown_', end: 3}), repeat: 0 });
         this.anims.create({ key: 'player_teleport', frameRate: 40, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_teleport_', end: 29}), repeat: 0 });
         this.anims.create({ key: 'player_appear', frameRate: 60, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_appear_', end: 28}), repeat: 0 });
+        this.anims.create({ key: 'laser', frameRate: 60, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'laser_', end: 29}), repeat: -1 });
         this.anims.create({ key: 'teleport', frameRate: 60, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'teleport_', end: 99}), repeat: -1 });
         this.anims.create({ key: 'blank', frameRate: 1, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'blank_', end: 1}), repeat: 0 });
     }

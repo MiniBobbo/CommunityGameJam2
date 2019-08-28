@@ -7,6 +7,7 @@ import { LevelDef } from "../../def/LevelDef";
 import { AudioZone } from "../../zones/AudioZone";
 import { C } from "../C";
 import { DeathZone } from "../../zones/DeathZone";
+import { LaserZone } from "../../zones/LaserZone";
 
 export class LevelState extends Phaser.Scene {
     player:Player;
@@ -37,7 +38,7 @@ export class LevelState extends Phaser.Scene {
         let fg = map.createStaticLayer('fg', basetiles);
 
         this.cameras.main.startFollow(this.player.sprite);
-        this.cameras.main.fadeIn(300);
+        this.cameras.main.fadeIn(1000);
         this.debugText = this.add.text(10,10,'').setScrollFactor(0,0);
         this.events.on('debug', (message:string) => {this.debugText.text = message;}, this);
         this.events.on('playerwin', this.WinLevel, this);
@@ -87,24 +88,20 @@ export class LevelState extends Phaser.Scene {
         this.time.addEvent({
             delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level', C.allLevels[C.level]);});}
+            callback: () => {this.cameras.main.fadeOut(3000, 0,0,0,() => {this.scene.start('level', C.allLevels[C.level]);});}
         });
     }
 
     PlayerDie(NextLevel:boolean = false) {
         this.player.sprite.disableBody();
         this.player.sprite.emit('disableinput');
-        this.time.addEvent({
-            delay:500,
-            callbackScope:this,
-            callback: () => {this.player.PlayAnimation('player_die');}
-        });
+        this.player.PlayAnimation('player_die');
         let levelToRun = NextLevel ?  C.allLevels[++C.level] : C.allLevels[C.level];
 
         this.time.addEvent({
             delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level', levelToRun);});}
+            callback: () => {this.cameras.main.fadeOut(3000, 0,0,0,() => {this.scene.start('level', levelToRun);});}
         });
     }
 
@@ -126,12 +123,18 @@ export class LevelState extends Phaser.Scene {
                     d.setPosition(o.x,o.y);
                     this.zones.push(d);
                     break;
-                
+                case 'laser':
+                    let l = new LaserZone(this, o);
+                    this.zones.push(l);
+                break;
                 case 'audio':
                     let a = new AudioZone(this,  o.x,o.y, o.width,o.height, `a_${o.type}`);
                     this.zones.push(a);
+                    break;
                     default:
                     break;
+
+
             }
         });
     }

@@ -67,8 +67,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":90.33333333333,
-                 "y":86.333333333333
+                 "x":79.33333333333,
+                 "y":89.333333333333
                 }, 
                 {
                  "height":28.25,
@@ -93,15 +93,15 @@
                  "y":168
                 }, 
                 {
-                 "height":86,
-                 "id":9,
-                 "name":"audio",
+                 "height":77,
+                 "id":10,
+                 "name":"laser",
                  "rotation":0,
-                 "type":"1",
+                 "type":"",
                  "visible":true,
-                 "width":106,
-                 "x":43,
-                 "y":40
+                 "width":15,
+                 "x":135,
+                 "y":43
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -110,7 +110,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":10,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

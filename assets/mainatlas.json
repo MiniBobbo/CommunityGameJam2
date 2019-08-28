@@ -5,7 +5,7 @@
 			"format": "RGBA8888",
 			"size": {
 				"w": 256,
-				"h": 1914
+				"h": 1990
 			},
 			"scale": 1,
 			"frames": [
@@ -3223,6 +3223,27 @@
 					}
 				},
 				{
+					"filename": "laser_0",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 238,
+						"y": 1195,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
 					"filename": "teleport_24",
 					"rotated": false,
 					"trimmed": true,
@@ -3448,7 +3469,7 @@
 					},
 					"frame": {
 						"x": 199,
-						"y": 1203,
+						"y": 1229,
 						"w": 55,
 						"h": 59
 					}
@@ -3721,7 +3742,7 @@
 					},
 					"frame": {
 						"x": 199,
-						"y": 1264,
+						"y": 1290,
 						"w": 55,
 						"h": 59
 					}
@@ -3868,7 +3889,7 @@
 					},
 					"frame": {
 						"x": 199,
-						"y": 1325,
+						"y": 1351,
 						"w": 55,
 						"h": 58
 					}
@@ -3952,7 +3973,7 @@
 					},
 					"frame": {
 						"x": 199,
-						"y": 1385,
+						"y": 1411,
 						"w": 55,
 						"h": 58
 					}
@@ -4078,7 +4099,7 @@
 					},
 					"frame": {
 						"x": 199,
-						"y": 1445,
+						"y": 1471,
 						"w": 55,
 						"h": 57
 					}
@@ -4225,7 +4246,7 @@
 					},
 					"frame": {
 						"x": 198,
-						"y": 1504,
+						"y": 1530,
 						"w": 55,
 						"h": 57
 					}
@@ -4309,7 +4330,7 @@
 					},
 					"frame": {
 						"x": 198,
-						"y": 1563,
+						"y": 1589,
 						"w": 55,
 						"h": 56
 					}
@@ -4435,7 +4456,7 @@
 					},
 					"frame": {
 						"x": 198,
-						"y": 1621,
+						"y": 1647,
 						"w": 55,
 						"h": 56
 					}
@@ -5023,7 +5044,7 @@
 					},
 					"frame": {
 						"x": 198,
-						"y": 1679,
+						"y": 1705,
 						"w": 55,
 						"h": 54
 					}
@@ -5107,7 +5128,7 @@
 					},
 					"frame": {
 						"x": 197,
-						"y": 1735,
+						"y": 1761,
 						"w": 55,
 						"h": 53
 					}
@@ -5176,48 +5197,6 @@
 					}
 				},
 				{
-					"filename": "player_running_5",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 4,
-						"y": 2,
-						"w": 23,
-						"h": 30
-					},
-					"frame": {
-						"x": 1,
-						"y": 1883,
-						"w": 23,
-						"h": 30
-					}
-				},
-				{
-					"filename": "player_appear_18",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 53,
-						"y": 48,
-						"w": 21,
-						"h": 35
-					},
-					"frame": {
-						"x": 1,
-						"y": 1845,
-						"w": 21,
-						"h": 35
-					}
-				},
-				{
 					"filename": "player_teleport_21",
 					"rotated": false,
 					"trimmed": true,
@@ -5232,94 +5211,10 @@
 						"h": 34
 					},
 					"frame": {
-						"x": 24,
+						"x": 1,
 						"y": 1845,
 						"w": 23,
 						"h": 34
-					}
-				},
-				{
-					"filename": "player_jumpdown_0",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 4,
-						"y": 0,
-						"w": 23,
-						"h": 32
-					},
-					"frame": {
-						"x": 26,
-						"y": 1881,
-						"w": 23,
-						"h": 32
-					}
-				},
-				{
-					"filename": "player_jumpup_0",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 4,
-						"y": 0,
-						"w": 23,
-						"h": 32
-					},
-					"frame": {
-						"x": 26,
-						"y": 1881,
-						"w": 23,
-						"h": 32
-					}
-				},
-				{
-					"filename": "player_jumpup_3",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 54,
-						"y": 44,
-						"w": 19,
-						"h": 40
-					},
-					"frame": {
-						"x": 51,
-						"y": 1871,
-						"w": 19,
-						"h": 40
-					}
-				},
-				{
-					"filename": "player_teleport_25",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 52,
-						"y": 41,
-						"w": 23,
-						"h": 28
-					},
-					"frame": {
-						"x": 72,
-						"y": 1883,
-						"w": 23,
-						"h": 28
 					}
 				},
 				{
@@ -5337,8 +5232,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 197,
-						"y": 1790,
+						"x": 26,
+						"y": 1845,
 						"w": 23,
 						"h": 33
 					}
@@ -5358,8 +5253,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 222,
-						"y": 1790,
+						"x": 51,
+						"y": 1871,
 						"w": 23,
 						"h": 33
 					}
@@ -5379,8 +5274,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 197,
-						"y": 1825,
+						"x": 26,
+						"y": 1880,
 						"w": 23,
 						"h": 33
 					}
@@ -5400,31 +5295,52 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 222,
-						"y": 1825,
+						"x": 1,
+						"y": 1881,
 						"w": 23,
 						"h": 33
 					}
 				},
 				{
-					"filename": "player_jumpup_4",
+					"filename": "player_jumpdown_0",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 128,
-						"h": 128
+						"w": 32,
+						"h": 32
 					},
 					"spriteSourceSize": {
-						"x": 53,
-						"y": 45,
-						"w": 21,
-						"h": 37
+						"x": 4,
+						"y": 0,
+						"w": 23,
+						"h": 32
 					},
 					"frame": {
-						"x": 140,
-						"y": 1860,
-						"w": 21,
-						"h": 37
+						"x": 197,
+						"y": 1816,
+						"w": 23,
+						"h": 32
+					}
+				},
+				{
+					"filename": "player_jumpup_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 23,
+						"h": 32
+					},
+					"frame": {
+						"x": 197,
+						"y": 1816,
+						"w": 23,
+						"h": 32
 					}
 				},
 				{
@@ -5442,10 +5358,52 @@
 						"h": 31
 					},
 					"frame": {
-						"x": 163,
-						"y": 1832,
+						"x": 222,
+						"y": 1816,
 						"w": 23,
 						"h": 31
+					}
+				},
+				{
+					"filename": "player_running_5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 23,
+						"h": 30
+					},
+					"frame": {
+						"x": 222,
+						"y": 1849,
+						"w": 23,
+						"h": 30
+					}
+				},
+				{
+					"filename": "player_teleport_25",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 52,
+						"y": 41,
+						"w": 23,
+						"h": 28
+					},
+					"frame": {
+						"x": 140,
+						"y": 1832,
+						"w": 23,
+						"h": 28
 					}
 				},
 				{
@@ -5463,8 +5421,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 163,
-						"y": 1865,
+						"x": 165,
+						"y": 1832,
 						"w": 22,
 						"h": 33
 					}
@@ -5484,8 +5442,8 @@
 						"h": 32
 					},
 					"frame": {
-						"x": 187,
-						"y": 1865,
+						"x": 140,
+						"y": 1862,
 						"w": 22,
 						"h": 32
 					}
@@ -5505,10 +5463,682 @@
 						"h": 31
 					},
 					"frame": {
-						"x": 211,
-						"y": 1860,
+						"x": 189,
+						"y": 1850,
 						"w": 22,
 						"h": 31
+					}
+				},
+				{
+					"filename": "player_jumpup_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 45,
+						"w": 21,
+						"h": 37
+					},
+					"frame": {
+						"x": 164,
+						"y": 1867,
+						"w": 21,
+						"h": 37
+					}
+				},
+				{
+					"filename": "player_appear_18",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 48,
+						"w": 21,
+						"h": 35
+					},
+					"frame": {
+						"x": 213,
+						"y": 1881,
+						"w": 21,
+						"h": 35
+					}
+				},
+				{
+					"filename": "player_jumpup_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 44,
+						"w": 19,
+						"h": 40
+					},
+					"frame": {
+						"x": 236,
+						"y": 1881,
+						"w": 19,
+						"h": 40
+					}
+				},
+				{
+					"filename": "laser_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 187,
+						"y": 1883,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_10",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 1923,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_11",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 1957,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_12",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 19,
+						"y": 1923,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_13",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 19,
+						"y": 1957,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_14",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 37,
+						"y": 1923,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_15",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 37,
+						"y": 1957,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_16",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 55,
+						"y": 1923,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_17",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 55,
+						"y": 1957,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_18",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 73,
+						"y": 1923,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_19",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 73,
+						"y": 1957,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 76,
+						"y": 1883,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_20",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 94,
+						"y": 1883,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_21",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 112,
+						"y": 1883,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_22",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 130,
+						"y": 1896,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_23",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 91,
+						"y": 1917,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_24",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 109,
+						"y": 1917,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_25",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 91,
+						"y": 1951,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_26",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 109,
+						"y": 1951,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_27",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 148,
+						"y": 1906,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_28",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 127,
+						"y": 1930,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_29",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 166,
+						"y": 1906,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 184,
+						"y": 1917,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 145,
+						"y": 1951,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 163,
+						"y": 1940,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 181,
+						"y": 1951,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 199,
+						"y": 1951,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 217,
+						"y": 1918,
+						"w": 16,
+						"h": 32
+					}
+				},
+				{
+					"filename": "laser_9",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 32
+					},
+					"frame": {
+						"x": 235,
+						"y": 1923,
+						"w": 16,
+						"h": 32
 					}
 				}
 			]
@@ -5517,6 +6147,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:1290a1541b4ea6f997f1d6df66e40246:adde56d3c9a64273e828033b59e3c030:9b2a4530a0a88d46c7c406cc86ad22f4$"
+		"smartupdate": "$TexturePacker:SmartUpdate:339e258e35fd2d1a17bf67a4e130fc44:364f3eb7dae07e6c827bb2ff21f154c1:9b2a4530a0a88d46c7c406cc86ad22f4$"
 	}
 }
