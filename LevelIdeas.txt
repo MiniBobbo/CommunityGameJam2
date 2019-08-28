@@ -3,14 +3,14 @@ Audio – “Hello?  Are you there?  Oh good.  We’ve been trying to get these 
 
 L2 – Player learns that the computer lies.  In the middle of the room is a pool of acid and a sign that reads “The Acid is perfectly safe”
 Audio – “Great, you made it to the next room.  Do me a favor and get to the next teleporter.”
-(When the player gets near the sign) “Oh, ignore that sign.  The acid is actually… well… extremely deadly.  We’ve been having problems with the computer running the signs recently.”
+(When the player gets near the sign) “Oh, ignore that sign.  The acid is actually… well… extremely deadly.  We’ve been having problems with the computer in charge of displaying the signs.  Just a small bug.  We'll get it resolved soon.”
 
 L3 – The player learns that things don’t always function the same from level to level.  
 Signs – “Acid extremely deadly.”
 Audio – “Ack, stupid computer.  Ignore that sign too.  You actually want to jump into this acid pool.  It can’t hurt you and the teleporter is down below.”
 
 L4 – The player learns that the person guiding them doesn’t know what they are doing.
-Audio – “You’re doing great!  I’m really excited about your progress.  Look, I think this acid pool is fine to jump into.  I have a note here that says ‘Acid safe’.  So hop right in!”  (Player dies a horrible death)/
+Audio – “You’re doing great!  I’m really excited about your progress.  Look, I think this acid pool is fine to jump into.  I have a note here that says ‘Acid safe’.  So hop right in!”  (Player dies a horrible death)
 
 L5 – Player learns that they are a clone.
 Audio - “Sorry about that!  It ends up the ‘Acid Safe’ note wasn’t left by a coworker.  It was printed by the computer!  I should have realized.  Again, I’m so sorry…”

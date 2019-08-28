@@ -1,5 +1,6 @@
 import { IH } from "../IH/IH";
 import { LevelDef } from "../../def/LevelDef";
+import { C } from "../C";
 
 export class Preload extends Phaser.Scene {
     preload() {
@@ -7,8 +8,11 @@ export class Preload extends Phaser.Scene {
         this.load.image('basetiles', './assets/basetiles.png');
         this.load.tilemapTiledJSON('testlevel', './assets/testlevel.json');
         this.load.tilemapTiledJSON('l1', './assets/l1.json');
+        this.load.tilemapTiledJSON('l2', './assets/l2.json');
+        this.load.tilemapTiledJSON('l3', './assets/l3.json');
         this.load.atlas('mainatlas', './assets/mainatlas.png', './assets/mainatlas.json');
-        this.load.audio('a_test', './assets/audio/test.ogg');
+        this.load.audio('a_test', ['./assets/audio/test.ogg', './assets/audio/test.mp3']);
+        this.load.audio('a_1', ['./assets/audio/a_1.ogg', './assets/audio/a_1.mp3']);
 
     }
     create() {
@@ -28,7 +32,7 @@ export class Preload extends Phaser.Scene {
         IH.AssignKeyToVirtualInput('D', 'right');
         IH.AssignKeyToVirtualInput('SPACE', 'jump');
         IH.AssignKeyToVirtualInput('L', 'jump');
-        this.scene.start('level', new LevelDef('l1'));
+        this.scene.start('level', C.allLevels[C.level]);
 
         this.anims.create({ key: 'player_run', frameRate: 12, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_running_', end: 5}), repeat: -1 });
         this.anims.create({ key: 'player_stand', frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_stand_', end: 1}), repeat: 0 });
