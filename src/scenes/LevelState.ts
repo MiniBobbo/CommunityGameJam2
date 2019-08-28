@@ -4,6 +4,7 @@ import { GameObjects } from "phaser";
 import { WinZone } from "../../zones/WinZone";
 import { CompScreen } from "../entities/CompScreen";
 import { LevelDef } from "../../def/LevelDef";
+import { AudioZone } from "../../zones/AudioZone";
 
 export class LevelState extends Phaser.Scene {
     player:Player;
@@ -86,6 +87,21 @@ export class LevelState extends Phaser.Scene {
         });
     }
 
+    PlayerDie() {
+        this.player.sprite.disableBody();
+        this.player.sprite.emit('disableinput');
+        this.time.addEvent({
+            delay:500,
+            callbackScope:this,
+            callback: () => {this.player.PlayAnimation('player_die');}
+        });
+        this.time.addEvent({
+            delay:4000,
+            callbackScope:this,
+            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level');});}
+        });
+    }
+
     CreateZones() {
         let objs = this.map.getObjectLayer('triggers');
         objs.objects.forEach( (o:any) => {
@@ -98,7 +114,10 @@ export class LevelState extends Phaser.Scene {
                 case 'screen':
                     let s = new CompScreen(this, o.type);
                     s.setPosition(o.x,o.y);
-                default:
+                case 'audio':
+                    let a = new AudioZone(this,  o.x,o.y, o.width,o.height, `a_${o.type}`);
+                    this.zones.push(a);
+                    default:
                     break;
             }
         });

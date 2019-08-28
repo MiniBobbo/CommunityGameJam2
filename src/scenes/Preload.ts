@@ -8,6 +8,7 @@ export class Preload extends Phaser.Scene {
         this.load.tilemapTiledJSON('testlevel', './assets/testlevel.json');
         this.load.tilemapTiledJSON('l1', './assets/l1.json');
         this.load.atlas('mainatlas', './assets/mainatlas.png', './assets/mainatlas.json');
+        this.load.audio('a_test', './assets/audio/test.ogg');
 
     }
     create() {
@@ -31,6 +32,7 @@ export class Preload extends Phaser.Scene {
 
         this.anims.create({ key: 'player_run', frameRate: 12, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_running_', end: 5}), repeat: -1 });
         this.anims.create({ key: 'player_stand', frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_stand_', end: 1}), repeat: 0 });
+        this.anims.create({ key: 'player_die', frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_explode_', end: 58}), repeat: 0 });
         this.anims.create({ key: 'player_jumpup', frameRate: 60, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_jumpup_', start:1, end: 28}), repeat: 0 });
         this.anims.create({ key: 'player_jumpdown', frameRate: 16, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_jumpdown_', end: 3}), repeat: 0 });
         this.anims.create({ key: 'player_teleport', frameRate: 40, frames: this.anims.generateFrameNames('mainatlas', { prefix: 'player_teleport_', end: 29}), repeat: 0 });

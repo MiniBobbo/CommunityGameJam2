@@ -67,8 +67,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":1386.33333333333,
-                 "y":279.333333333333
+                 "x":1309.33333333333,
+                 "y":240.333333333333
                 }, 
                 {
                  "height":28.25,
@@ -92,6 +92,17 @@
                  "width":0,
                  "x":530,
                  "y":236
+                }, 
+                {
+                 "height":114,
+                 "id":7,
+                 "name":"audio",
+                 "rotation":0,
+                 "type":"test",
+                 "visible":true,
+                 "width":89,
+                 "x":1365,
+                 "y":168
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -100,7 +111,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":6,
+ "nextobjectid":8,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
