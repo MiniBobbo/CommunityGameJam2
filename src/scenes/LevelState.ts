@@ -5,6 +5,8 @@ import { WinZone } from "../../zones/WinZone";
 import { CompScreen } from "../entities/CompScreen";
 import { LevelDef } from "../../def/LevelDef";
 import { AudioZone } from "../../zones/AudioZone";
+import { C } from "../C";
+import { DeathZone } from "../../zones/DeathZone";
 
 export class LevelState extends Phaser.Scene {
     player:Player;
@@ -39,6 +41,7 @@ export class LevelState extends Phaser.Scene {
         this.debugText = this.add.text(10,10,'').setScrollFactor(0,0);
         this.events.on('debug', (message:string) => {this.debugText.text = message;}, this);
         this.events.on('playerwin', this.WinLevel, this);
+        this.events.on('playerdie', this.PlayerDie, this);
         this.physics.add.overlap(this.player.sprite, this.zones, (p, z:Phaser.GameObjects.Zone) => {
             console.log(`Overlap zone ${z.name}`);    
             z.emit('overlap', p);
@@ -73,6 +76,7 @@ export class LevelState extends Phaser.Scene {
     }
 
     WinLevel() {
+        C.level++;
         this.player.sprite.disableBody();
         this.player.sprite.emit('disableinput');
         this.time.addEvent({
@@ -83,11 +87,11 @@ export class LevelState extends Phaser.Scene {
         this.time.addEvent({
             delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level');});}
+            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level', C.allLevels[C.level]);});}
         });
     }
 
-    PlayerDie() {
+    PlayerDie(NextLevel:boolean = false) {
         this.player.sprite.disableBody();
         this.player.sprite.emit('disableinput');
         this.time.addEvent({
@@ -95,10 +99,12 @@ export class LevelState extends Phaser.Scene {
             callbackScope:this,
             callback: () => {this.player.PlayAnimation('player_die');}
         });
+        let levelToRun = NextLevel ?  C.allLevels[++C.level] : C.allLevels[C.level];
+
         this.time.addEvent({
             delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level');});}
+            callback: () => {this.cameras.main.fadeOut(1000, 0,0,0,() => {this.scene.start('level', levelToRun);});}
         });
     }
 
@@ -114,6 +120,13 @@ export class LevelState extends Phaser.Scene {
                 case 'screen':
                     let s = new CompScreen(this, o.type);
                     s.setPosition(o.x,o.y);
+                    break;
+                case 'death':
+                    let d = new DeathZone(this, o.x,o.y, o.width,o.height);
+                    d.setPosition(o.x,o.y);
+                    this.zones.push(d);
+                    break;
+                
                 case 'audio':
                     let a = new AudioZone(this,  o.x,o.y, o.width,o.height, `a_${o.type}`);
                     this.zones.push(a);
