@@ -75,23 +75,34 @@
                  "id":4,
                  "name":"end",
                  "rotation":0,
-                 "type":"l4",
+                 "type":"l5",
                  "visible":true,
                  "width":27,
                  "x":146.416666666667,
                  "y":771.916666666667
                 }, 
                 {
+                 "height":110.666666666667,
+                 "id":9,
+                 "name":"death",
+                 "rotation":0,
+                 "type":"l5",
+                 "visible":true,
+                 "width":162.666666666667,
+                 "x":446.666666666667,
+                 "y":261.333333333333
+                }, 
+                {
                  "height":0,
-                 "id":5,
+                 "id":10,
                  "name":"screen",
                  "point":true,
                  "rotation":0,
-                 "type":"Beware of acid",
+                 "type":"New study links immersion in acid to skin health.",
                  "visible":true,
                  "width":0,
-                 "x":379,
-                 "y":199.333333333333
+                 "x":392,
+                 "y":193
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -100,7 +111,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":9,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

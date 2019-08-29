@@ -75,7 +75,7 @@
                  "id":4,
                  "name":"end",
                  "rotation":0,
-                 "type":"",
+                 "type":"l2",
                  "visible":true,
                  "width":27,
                  "x":1490.41666666667,
@@ -93,15 +93,21 @@
                  "y":168
                 }, 
                 {
-                 "height":77,
-                 "id":10,
+                 "height":81,
+                 "id":11,
                  "name":"laser",
+                 "properties":[
+                        {
+                         "name":"level",
+                         "type":"string",
+                         "value":"l2"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":15,
-                 "x":135,
-                 "y":43
+                 "width":19,
+                 "x":133,
+                 "y":40
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -110,7 +116,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":11,
+ "nextobjectid":12,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

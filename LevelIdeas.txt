@@ -10,7 +10,7 @@ Signs – “Acid extremely deadly.”
 Audio – “Ack, stupid computer.  Ignore that sign too.  You actually want to jump into this acid pool.  It can’t hurt you and the teleporter is down below.”
 
 L4 – The player learns that the person guiding them doesn’t know what they are doing.
-Audio – “You’re doing great!  I’m really excited about your progress.  Look, I think this acid pool is fine to jump into.  I have a note here that says ‘Acid safe’.  So hop right in!”  (Player dies a horrible death)
+Audio – “You’re doing great!  I’m really excited about your progress.  This acid pool is fine to jump into just like the last one.  I have a note here that says ‘Acid safe’.  So hop right in!”  (Player dies a horrible death)
 
 L5 – Player learns that they are a clone.
 Audio - “Sorry about that!  It ends up the ‘Acid Safe’ note wasn’t left by a coworker.  It was printed by the computer!  I should have realized.  Again, I’m so sorry…”

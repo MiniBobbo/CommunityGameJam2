@@ -19,9 +19,10 @@ export class LevelState extends Phaser.Scene {
 
     }
 
-    create(level:LevelDef) {
+    create() {
+        this.time.removeAllEvents();
         this.ih = new IH(this);
-        this.map = this.make.tilemap({ key: level.name });
+        this.map = this.make.tilemap({ key: C.level });
         let map = this.map;
         let tiles = map.addTilesetImage("tiles", "tiles");
         let basetiles = map.addTilesetImage("basetiles", "basetiles");
@@ -40,14 +41,16 @@ export class LevelState extends Phaser.Scene {
         this.cameras.main.startFollow(this.player.sprite);
         this.cameras.main.fadeIn(1000);
         this.debugText = this.add.text(10,10,'').setScrollFactor(0,0);
-        this.events.on('debug', (message:string) => {this.debugText.text = message;}, this);
-        this.events.on('playerwin', this.WinLevel, this);
-        this.events.on('playerdie', this.PlayerDie, this);
-        this.physics.add.overlap(this.player.sprite, this.zones, (p, z:Phaser.GameObjects.Zone) => {
+         this.physics.add.overlap(this.player.sprite, this.zones, (p, z:Phaser.GameObjects.Zone) => {
             console.log(`Overlap zone ${z.name}`);    
             z.emit('overlap', p);
         });
         this.cameras.main.setBounds(0,0,l.width, l.height);
+        this.events.on('shutdown', this.ShutDown, this);
+        this.events.on('debug', (message:string) => {this.debugText.text = message;}, this);
+        this.events.on('playerwin', this.WinLevel, this);
+        this.events.on('playerdie', this.PlayerDie, this);
+
     }
 
 
@@ -70,14 +73,13 @@ export class LevelState extends Phaser.Scene {
             callback:() => {this.player.PlayAnimation('player_appear');}
         });
         this.time.addEvent({
-            delay:1500,
+            delay:1000,
             callbackScope: this,
             callback:() => {this.player.sprite.body.enable = true; this.player.sprite.emit('enableinput');}
         });
     }
 
     WinLevel() {
-        C.level++;
         this.player.sprite.disableBody();
         this.player.sprite.emit('disableinput');
         this.time.addEvent({
@@ -88,30 +90,35 @@ export class LevelState extends Phaser.Scene {
         this.time.addEvent({
             delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(3000, 0,0,0,() => {this.scene.start('level', C.allLevels[C.level]);});}
+            //@ts-ignore
+            callback: () => {
+                console.log(`Going to ${C.level}`);
+                this.cameras.main.fadeOut(3000, 0,0,0,() => {this.scene.restart();});  }
         });
     }
 
-    PlayerDie(NextLevel:boolean = false) {
+    PlayerDie() {
         this.player.sprite.disableBody();
         this.player.sprite.emit('disableinput');
         this.player.PlayAnimation('player_die');
-        let levelToRun = NextLevel ?  C.allLevels[++C.level] : C.allLevels[C.level];
-
         this.time.addEvent({
             delay:4000,
             callbackScope:this,
-            callback: () => {this.cameras.main.fadeOut(3000, 0,0,0,() => {this.scene.start('level', levelToRun);});}
+            //@ts-ignore
+            callback: () => {
+                console.log(`Going to ${C.level}`);
+                this.cameras.main.fadeOut(3000, 0,0,0,() => {this.scene.restart();});}
         });
     }
+
+
 
     CreateZones() {
         let objs = this.map.getObjectLayer('triggers');
         objs.objects.forEach( (o:any) => {
-            console.log(`Zone ${o.name}`);
             switch (o.name) {
                 case 'end':
-                    let z = new WinZone(this, o.x,o.y, o.width,o.height);
+                    let z = new WinZone(this, o);
                     this.zones.push(z);
                     break;
                 case 'screen':
@@ -119,7 +126,7 @@ export class LevelState extends Phaser.Scene {
                     s.setPosition(o.x,o.y);
                     break;
                 case 'death':
-                    let d = new DeathZone(this, o.x,o.y, o.width,o.height);
+                    let d = new DeathZone(this, o);
                     d.setPosition(o.x,o.y);
                     this.zones.push(d);
                     break;
@@ -137,5 +144,13 @@ export class LevelState extends Phaser.Scene {
 
             }
         });
+    }
+
+    ShutDown() {
+        this.events.removeListener('shutdown');
+        this.events.removeListener('debug');
+        this.events.removeListener('playerwin');
+        this.events.removeListener('playerdie');
+
     }
 }
